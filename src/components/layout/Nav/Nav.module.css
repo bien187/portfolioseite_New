@@ -1,0 +1,54 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  padding-block: var(--sp-nav-y);
+  transition: background var(--t-medium), border-color var(--t-medium);
+}
+
+/* Inner wrapper mirrors pageCol so logo/links align with page content */
+.navInner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding-inline: var(--sp-section-x);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navScrolled {
+  background: rgba(9, 9, 11, 0.88);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.045);
+}
+
+.logo {
+  font-family: var(--f-mono);
+  font-size: var(--fs-label);
+  color: var(--c-lo);
+  letter-spacing: 0.14em;
+  user-select: none;
+}
+
+.links {
+  display: flex;
+  gap: clamp(1rem, 3vw, 1.625rem);
+  list-style: none;
+}
+
+.link {
+  font-family: var(--f-sans);
+  font-size: var(--fs-body-sm);
+  font-weight: 300;
+  color: var(--c-mid);
+  letter-spacing: 0.025em;
+  transition: color var(--t-fast);
+  cursor: pointer;
+}
+
+.link:hover {
+  color: var(--c-hi);
+}

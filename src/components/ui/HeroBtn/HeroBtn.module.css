@@ -1,0 +1,36 @@
+.btn {
+  font-family: var(--f-sans);
+  font-size: var(--fs-body-sm);
+  letter-spacing: 0.025em;
+  display: inline-block;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btnSolid {
+  color: var(--c-hi);
+  background: rgba(255, 255, 255, 0.057);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  padding: 0.75rem 1.75rem;
+  font-weight: 400;
+  transition: background var(--t-fast), border-color var(--t-fast);
+}
+
+.btnSolid:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.13);
+}
+
+.btnGhost {
+  color: var(--c-mid);
+  background: transparent;
+  border: none;
+  padding: 0.75rem 0.25rem;
+  font-weight: 300;
+  transition: color var(--t-fast);
+}
+
+.btnGhost:hover {
+  color: var(--c-hi);
+}

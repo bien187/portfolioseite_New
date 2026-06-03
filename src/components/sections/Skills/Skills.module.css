@@ -1,0 +1,87 @@
+.section {
+  padding-block: var(--sp-section-y);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 clamp(2.5rem, 8vw, 4.5rem);
+}
+
+.colLabel {
+  font-family: var(--f-sans);
+  font-size: var(--fs-label);
+  font-weight: 400;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--c-lo);
+  margin-bottom: 1.5rem;
+}
+
+.skillRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--c-line);
+  cursor: default;
+}
+
+.skillName {
+  font-family: var(--f-sans);
+  font-size: 0.9375rem;
+  font-weight: 300;
+  color: var(--c-mid);
+  letter-spacing: 0.01em;
+  transition: color var(--t-fast);
+}
+
+.skillRow:hover .skillName {
+  color: var(--c-hi);
+}
+
+.skillValue {
+  font-family: var(--f-mono);
+  font-size: var(--fs-label);
+  color: var(--c-lo);
+  letter-spacing: 0.07em;
+  transition: color var(--t-fast);
+}
+
+.skillRow:hover .skillValue {
+  color: var(--c-mid);
+}
+
+.skillSup {
+  font-size: 0.4375rem;
+  vertical-align: super;
+}
+
+.interestOuter {
+  /* reveal wrapper — opacity/translate via Framer Motion */
+}
+
+.interestInner {
+  padding: 0.5625rem 0;
+  border-bottom: 1px solid var(--c-line);
+  font-family: var(--f-display);
+  font-size: var(--fs-interests);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: rgba(237, 236, 234, 0.37);
+  cursor: default;
+  user-select: none;
+  transition: color var(--t-fast), transform 0.42s var(--ease-spring);
+}
+
+.interestInner:hover {
+  color: var(--c-hi);
+  transform: translateX(0.5625rem);
+}
+
+@media (max-width: 40rem) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 3.25rem 0;
+  }
+}

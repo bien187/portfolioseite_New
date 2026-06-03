@@ -1,0 +1,32 @@
+import * as React from "react";
+const SVGComponent = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={64}
+    height={64}
+    viewBox="0 0 64 64"
+    role="img"
+    aria-label="BM favicon"
+    {...props}
+  >
+    <title>{"BM"}</title>
+    <defs>
+      <style type="text/css">
+        {
+          "\n\t\t\t@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');\n\t\t\t.bg { fill: #09090B; }\n\t\t\t.letters { fill: #EDECEA; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600; font-size: 36px; }\n\t\t"
+        }
+      </style>
+    </defs>
+    <rect className="bg" width={64} height={64} rx={10} />
+    <text
+      className="letters"
+      x="50%"
+      y="52%"
+      textAnchor="middle"
+      dominantBaseline="central"
+    >
+      {"BM"}
+    </text>
+  </svg>
+);
+export default SVGComponent;

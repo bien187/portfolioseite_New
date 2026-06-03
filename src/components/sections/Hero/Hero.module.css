@@ -1,0 +1,128 @@
+.hero {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-block: var(--sp-hero-top) var(--sp-hero-bottom);
+  position: relative;
+  overflow: hidden;
+}
+
+.atmosphere {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 80% 60% at 16% 26%, rgba(191, 168, 128, 0.048) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 88% 72%, rgba(70, 90, 150, 0.024) 0%, transparent 55%);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.statusPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: clamp(1.5rem, 4vw, 3rem);
+}
+
+.statusDot {
+  width: 0.3125rem;
+  height: 0.3125rem;
+  border-radius: 50%;
+  background: var(--c-accent);
+  flex-shrink: 0;
+  animation: blinker 2.8s ease-in-out infinite;
+}
+
+.statusText {
+  font-family: var(--f-mono);
+  font-size: var(--fs-chip);
+  color: var(--c-mid);
+  letter-spacing: 0.11em;
+}
+
+.headline {
+  font-family: var(--f-display);
+  font-size: var(--fs-hero);
+  font-weight: 600;
+  color: var(--c-hi);
+  line-height: 0.875;
+  letter-spacing: -0.03em;
+  margin-bottom: clamp(1.5rem, 4vw, 2.75rem);
+}
+
+.subline {
+  font-family: var(--f-sans);
+  font-size: var(--fs-body-lg);
+  font-weight: 300;
+  color: var(--c-mid);
+  max-width: 32.5rem;
+  line-height: 1.72;
+  letter-spacing: 0.01em;
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.sublineAccent {
+  font-style: italic;
+  font-family: var(--f-display);
+  font-size: 1.1em;
+  color: var(--c-hi);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: clamp(1.5rem, 4vw, 2.75rem);
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.scrollLabel {
+  font-family: var(--f-mono);
+  font-size: var(--fs-micro);
+  color: var(--c-lo);
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+}
+
+.scrollLine {
+  width: 1px;
+  height: 2.5rem;
+  background: linear-gradient(to bottom, var(--c-lo), transparent);
+  animation: scrollPulse 2.2s ease-in-out infinite;
+}
+
+/* ── Typewriter cursor ───────────────────────────────────────── */
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 0.06em;
+  color: var(--c-accent);
+  animation: cursorBlink 0.85s step-end infinite;
+  transition: opacity 0.45s ease;
+}
+
+.cursorHide {
+  opacity: 0;
+  animation: none;
+}

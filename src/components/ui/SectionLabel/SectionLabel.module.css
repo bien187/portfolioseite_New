@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.text {
+  font-family: var(--f-mono);
+  font-size: var(--fs-label);
+  letter-spacing: 0.17em;
+  color: var(--c-lo);
+  text-transform: uppercase;
+}
+
+.line {
+  height: 1px;
+  width: 3.5rem;
+  background: var(--c-line);
+}

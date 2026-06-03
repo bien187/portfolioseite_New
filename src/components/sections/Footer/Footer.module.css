@@ -1,0 +1,90 @@
+.footer {
+  padding-block: var(--sp-section-y) clamp(2.5rem, 5vw, 4.5rem);
+  border-top: 1px solid var(--c-line);
+}
+
+.upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2.5rem;
+  margin-bottom: clamp(2.5rem, 6vw, 4rem);
+  flex-wrap: wrap;
+}
+
+.headline {
+  font-family: var(--f-display);
+  font-size: var(--fs-footer-hero);
+  font-weight: 600;
+  color: var(--c-hi);
+  letter-spacing: -0.035em;
+  line-height: 0.88;
+  margin-bottom: clamp(1rem, 2.5vw, 1.75rem);
+}
+
+.copy {
+  font-family: var(--f-sans);
+  font-size: var(--fs-body);
+  font-weight: 300;
+  color: var(--c-mid);
+  max-width: 22.5rem;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 0.3125rem;
+  font-family: var(--f-sans);
+  font-size: var(--fs-body);
+  font-weight: 300;
+  color: var(--c-mid);
+  letter-spacing: 0.02em;
+  transition: color var(--t-fast);
+}
+
+.link:hover {
+  color: var(--c-hi);
+}
+
+.linkArrow {
+  font-family: var(--f-mono);
+  font-size: 0.6875rem;
+  display: inline-block;
+}
+
+.colophon {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--c-line);
+}
+
+.colophonText {
+  font-family: var(--f-mono);
+  font-size: var(--fs-chip);
+  color: var(--c-lo);
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 40rem) {
+  .upper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .links {
+    align-items: flex-start;
+  }
+}

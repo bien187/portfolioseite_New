@@ -1,0 +1,7 @@
+.label {
+  font-family: var(--f-mono);
+  font-size: var(--fs-chip);
+  letter-spacing: 0.14em;
+  color: var(--c-lo);
+  text-transform: uppercase;
+}

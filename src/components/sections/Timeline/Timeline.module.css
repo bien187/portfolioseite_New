@@ -1,0 +1,129 @@
+.section {
+  padding-block: var(--sp-section-y);
+}
+
+.group {
+  margin-bottom: var(--sp-group-gap);
+}
+
+.endLine {
+  border-top: 1px solid var(--c-line);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: var(--timeline-col) 1fr;
+  gap: 0 clamp(1.25rem, 3vw, 2rem);
+  padding: var(--sp-row-y) 0;
+  border-top: 1px solid var(--c-line);
+}
+
+.rowLive {
+  border-top-color: var(--c-line-live);
+}
+
+.period {
+  padding-top: 0.125rem;
+}
+
+.periodText {
+  font-family: var(--f-mono);
+  font-size: var(--fs-chip);
+  color: var(--c-lo);
+  letter-spacing: 0.07em;
+  display: block;
+}
+
+.periodLive {
+  color: var(--c-accent);
+}
+
+.roleRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+  margin-bottom: 0.375rem;
+}
+
+.role {
+  font-family: var(--f-sans);
+  font-size: var(--fs-body-sm);
+  font-weight: 300;
+  color: var(--c-mid);
+  letter-spacing: 0.01em;
+  transition: color var(--t-fast);
+}
+
+.roleLive {
+  font-weight: 400;
+  color: var(--c-hi);
+}
+
+.row:hover .role {
+  color: rgba(237, 236, 234, 0.74);
+}
+
+.row:hover .roleLive {
+  color: var(--c-hi);
+}
+
+.liveTag {
+  font-family: var(--f-mono);
+  font-size: var(--fs-badge);
+  color: var(--c-accent);
+  background: rgba(191, 168, 128, 0.1);
+  border: 1px solid rgba(191, 168, 128, 0.25);
+  border-radius: 0.1875rem;
+  padding: 0.125rem 0.4375rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.org {
+  font-family: var(--f-display);
+  font-size: var(--fs-timeline);
+  font-weight: 500;
+  color: rgba(237, 236, 234, 0.66);
+  letter-spacing: -0.022em;
+  line-height: 1.1;
+  margin-bottom: 0.4375rem;
+  transition: color var(--t-fast);
+}
+
+.row:hover .org {
+  color: var(--c-hi);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.location {
+  font-family: var(--f-mono);
+  font-size: var(--fs-chip);
+  color: var(--c-lo);
+  letter-spacing: 0.07em;
+}
+
+.note {
+  font-family: var(--f-sans);
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--c-lo);
+  font-weight: 300;
+}
+
+@media (max-width: 40rem) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: 0.25rem 0;
+  }
+
+  .period {
+    padding-top: 0;
+  }
+}
