@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react"
 
-export function useTypewriter(text, speed = 55, startDelay = 350) {
+export function useTypewriter(text, speed = 55, startDelay = 350, enabled = true) {
   const [index, setIndex] = useState(0)
 
   useEffect(() => {
+    if (!enabled) return
     let interval
     const start = setTimeout(() => {
       interval = setInterval(() => {
@@ -14,7 +15,7 @@ export function useTypewriter(text, speed = 55, startDelay = 350) {
       }, speed)
     }, startDelay)
     return () => { clearTimeout(start); clearInterval(interval) }
-  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [enabled]) // eslint-disable-line react-hooks/exhaustive-deps
 
   return [text.slice(0, index), index >= text.length]
 }

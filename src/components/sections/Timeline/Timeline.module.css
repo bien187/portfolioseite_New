@@ -22,6 +22,19 @@
   border-top-color: var(--c-line-live);
 }
 
+.rowCenter .org {
+  color: var(--c-hi);
+}
+
+.rowCenter .role {
+  color: rgba(237, 236, 234, 0.74);
+}
+
+.rowCenter {
+  position: relative;
+  z-index: 1;
+}
+
 .period {
   padding-top: 0.125rem;
 }

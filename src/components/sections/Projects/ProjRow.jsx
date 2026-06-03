@@ -2,6 +2,7 @@ import { useRef, useState, useEffect, useCallback } from "react"
 import { motion } from "framer-motion"
 import { Chip } from "../../ui/Chip/Chip"
 import { SMOOTH, SPRING, C } from "../../../design/tokens"
+import { useCenterInView } from "../../../hooks/useCenterInView"
 import styles from "./Projects.module.css"
 
 export function ProjRow({ p, i, small = false }) {
@@ -9,6 +10,7 @@ export function ProjRow({ p, i, small = false }) {
   const glowRef = useRef(null)
   const [vis, setVis] = useState(false)
   const [hov, setHov] = useState(false)
+  const isCenter = useCenterInView(rowRef)
 
   useEffect(() => {
     const el = rowRef.current
@@ -40,9 +42,11 @@ export function ProjRow({ p, i, small = false }) {
         styles.row,
         p.url ? styles.rowLink : "",
         p.ipa ? styles.rowIpa  : "",
+        isCenter ? styles.rowCenter : "",
       ].filter(Boolean).join(" ")}
+      aria-current={isCenter ? "true" : undefined}
       initial={{ opacity: 0, y: 20 }}
-      animate={vis ? { opacity: 1, y: 0 } : {}}
+      animate={!vis ? {} : isCenter ? { opacity: 1, y: -4, scale: 1.012 } : { opacity: 1, y: 0, scale: 1 }}
       transition={SMOOTH}
       whileTap={p.url ? { scale: 0.992 } : {}}
       onMouseEnter={() => setHov(true)}

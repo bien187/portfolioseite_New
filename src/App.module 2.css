@@ -1,0 +1,5 @@
+.pageCol {
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding-inline: var(--sp-section-x);
+}

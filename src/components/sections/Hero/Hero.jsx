@@ -5,13 +5,19 @@ import { useTypewriter } from "../../../hooks/useTypewriter"
 import { SMOOTH } from "../../../design/tokens"
 import styles from "./Hero.module.css"
 
+const SUBLINE_PLAIN = "Angehender Informatiker — aktuell im Praktikumsjahr bei der "
+const SUBLINE_ACCENT = "Schweizerischen Nationalbank."
+const SUBLINE = SUBLINE_PLAIN + SUBLINE_ACCENT
+
 export function Hero() {
   const [ready, setReady] = useState(false)
   useEffect(() => { const t = setTimeout(() => setReady(true), 120); return () => clearTimeout(t) }, [])
 
-  // "Ben\nMüller." = 11 chars × 55 ms + 350 ms delay ≈ 955 ms total
-  const [typed, done] = useTypewriter("Ben\nMüller.", 150, 350)
-  const parts = typed.split("\n")
+  const [typedHeadline, headlineDone] = useTypewriter("Ben\nMüller.", 150, 350)
+  const [typedSubline, sublineDone] = useTypewriter(SUBLINE, 28, 80, headlineDone)
+
+  const parts = typedHeadline.split("\n")
+  const sublineStarted = typedSubline.length > 0
 
   const reveal = (delay) => ({ ...SMOOTH, delay })
 
@@ -31,34 +37,37 @@ export function Hero() {
           <span className={styles.statusText}>SNB · FE RZ-Dienste · Aktuell</span>
         </motion.div>
 
-        {/* Headline — animated via typewriter, no Framer entrance */}
+        {/* Headline — cursor moves to subline once subline starts typing */}
         <h1 className={styles.headline}>
           {parts[0]}
           {parts.length > 1 && <br />}
           {parts[1] ?? ""}
           <span
-            className={`${styles.cursor} ${done ? styles.cursorHide : ""}`}
+            className={`${styles.cursor} ${sublineStarted ? styles.cursorHide : ""}`}
             aria-hidden
           >|</span>
         </h1>
 
-        {/* Subline — appears after typing is done */}
-        <motion.p
-          className={styles.subline}
-          initial={{ opacity: 0, y: 26 }}
-          animate={done ? { opacity: 1, y: 0 } : {}}
-          transition={reveal(0.12)}
-        >
-          Angehender Informatiker — aktuell im Praktikumsjahr bei der{" "}
-          <em className={styles.sublineAccent}>Schweizerischen Nationalbank.</em>
-        </motion.p>
+        {/* Subline — typed out after headline completes, no fly-in */}
+        {headlineDone && (
+          <p className={styles.subline}>
+            {typedSubline.length < SUBLINE_PLAIN.length
+              ? typedSubline
+              : <>
+                  {SUBLINE_PLAIN}
+                  <em className={styles.sublineAccent}>{typedSubline.slice(SUBLINE_PLAIN.length)}</em>
+                </>
+            }
+            {!sublineDone && <span className={styles.cursor} aria-hidden>|</span>}
+          </p>
+        )}
 
-        {/* CTAs — appear slightly after subline */}
+        {/* CTAs — appear after subline is fully typed */}
         <motion.div
           className={styles.ctas}
           initial={{ opacity: 0, y: 26 }}
-          animate={done ? { opacity: 1, y: 0 } : {}}
-          transition={reveal(0.28)}
+          animate={sublineDone ? { opacity: 1, y: 0 } : {}}
+          transition={reveal(0.18)}
         >
           <HeroBtn href="#projekte" solid>Projekte ansehen</HeroBtn>
           <HeroBtn href="#kontakt">Kontakt →</HeroBtn>
@@ -69,7 +78,7 @@ export function Hero() {
       <motion.div
         className={styles.scrollIndicator}
         initial={{ opacity: 0 }}
-        animate={done ? { opacity: 0.4 } : {}}
+        animate={sublineDone ? { opacity: 0.4 } : {}}
         transition={{ duration: 1, delay: 0.6 }}
       >
         <span className={styles.scrollLabel}>scroll</span>

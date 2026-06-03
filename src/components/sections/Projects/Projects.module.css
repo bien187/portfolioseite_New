@@ -24,6 +24,19 @@
   border-top-color: var(--c-line-live);
 }
 
+.rowCenter .nameLg,
+.rowCenter .nameSm {
+  color: var(--c-hi);
+}
+
+.rowCenter .desc {
+  color: var(--c-mid);
+}
+
+.rowCenter {
+  z-index: 1;
+}
+
 .rowInner {
   position: relative;
   z-index: 1;

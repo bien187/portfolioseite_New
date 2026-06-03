@@ -80,7 +80,7 @@ export const TIMELINE = [
   {
     period: "2019 — 2022",
     role: "Sekundarstufe",
-    org: "OZ Lenzhard",
+    org: "Oberstufenzentrum Lenzhard",
     loc: "Lenzburg",
     note: null,
     live: false,
