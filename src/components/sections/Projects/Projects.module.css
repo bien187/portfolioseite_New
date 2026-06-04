@@ -24,18 +24,6 @@
   border-top-color: var(--c-line-live);
 }
 
-.rowCenter .nameLg,
-.rowCenter .nameSm {
-  color: var(--c-hi);
-}
-
-.rowCenter .desc {
-  color: var(--c-mid);
-}
-
-.rowCenter {
-  z-index: 1;
-}
 
 .rowInner {
   position: relative;
@@ -65,8 +53,7 @@
   font-weight: 600;
   letter-spacing: -0.025em;
   line-height: 1;
-  color: rgba(237, 236, 234, 0.82);
-  transition: color var(--t-fast);
+  color: color-mix(in srgb, rgba(237,236,234,0.82) calc((1 - var(--p,0)) * 100%), var(--c-hi) calc(var(--p,0) * 100%));
   margin: 0;
 }
 
@@ -89,7 +76,7 @@
 .year {
   font-family: var(--f-mono);
   font-size: var(--fs-chip);
-  color: var(--c-lo);
+  color: color-mix(in srgb, var(--c-lo) calc((1 - var(--p,0)) * 100%), var(--c-mid) calc(var(--p,0) * 100%));
   letter-spacing: 0.08em;
   flex-shrink: 0;
 }
@@ -97,12 +84,11 @@
 .desc {
   font-family: var(--f-sans);
   font-weight: 300;
-  color: var(--c-lo);
+  color: color-mix(in srgb, var(--c-lo) calc((1 - var(--p,0)) * 100%), var(--c-mid) calc(var(--p,0) * 100%));
   letter-spacing: 0.01em;
   line-height: 1.65;
   margin-bottom: 0.75rem;
   max-width: 31.25rem;
-  transition: color var(--t-fast);
 }
 
 .descLg {

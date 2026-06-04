@@ -2,6 +2,8 @@
   font-family: var(--f-mono);
   font-size: var(--fs-chip);
   letter-spacing: 0.14em;
-  color: var(--c-lo);
+  color: color-mix(in srgb, var(--c-lo) calc((1 - var(--p,0)) * 100%), var(--c-hi) calc(var(--p,0) * 100%));
   text-transform: uppercase;
+  position: relative;
+  z-index: 5;
 }

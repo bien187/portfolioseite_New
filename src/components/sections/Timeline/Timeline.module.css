@@ -22,18 +22,6 @@
   border-top-color: var(--c-line-live);
 }
 
-.rowCenter .org {
-  color: var(--c-hi);
-}
-
-.rowCenter .role {
-  color: rgba(237, 236, 234, 0.74);
-}
-
-.rowCenter {
-  position: relative;
-  z-index: 1;
-}
 
 .period {
   padding-top: 0.125rem;
@@ -42,7 +30,7 @@
 .periodText {
   font-family: var(--f-mono);
   font-size: var(--fs-chip);
-  color: var(--c-lo);
+  color: color-mix(in srgb, var(--c-lo) calc((1 - var(--p,0)) * 100%), var(--c-mid) calc(var(--p,0) * 100%));
   letter-spacing: 0.07em;
   display: block;
 }
@@ -63,9 +51,8 @@
   font-family: var(--f-sans);
   font-size: var(--fs-body-sm);
   font-weight: 300;
-  color: var(--c-mid);
+  color: color-mix(in srgb, var(--c-mid) calc((1 - var(--p,0)) * 100%), var(--c-hi) calc(var(--p,0) * 100%));
   letter-spacing: 0.01em;
-  transition: color var(--t-fast);
 }
 
 .roleLive {
@@ -97,11 +84,10 @@
   font-family: var(--f-display);
   font-size: var(--fs-timeline);
   font-weight: 500;
-  color: rgba(237, 236, 234, 0.66);
+  color: color-mix(in srgb, rgba(237,236,234,0.66) calc((1 - var(--p,0)) * 100%), var(--c-hi) calc(var(--p,0) * 100%));
   letter-spacing: -0.022em;
   line-height: 1.1;
   margin-bottom: 0.4375rem;
-  transition: color var(--t-fast);
 }
 
 .row:hover .org {
@@ -118,7 +104,7 @@
 .location {
   font-family: var(--f-mono);
   font-size: var(--fs-chip);
-  color: var(--c-lo);
+  color: color-mix(in srgb, var(--c-lo) calc((1 - var(--p,0)) * 100%), var(--c-mid) calc(var(--p,0) * 100%));
   letter-spacing: 0.07em;
 }
 
@@ -126,7 +112,7 @@
   font-family: var(--f-sans);
   font-size: 0.75rem;
   font-style: italic;
-  color: var(--c-lo);
+  color: color-mix(in srgb, var(--c-lo) calc((1 - var(--p,0)) * 100%), var(--c-mid) calc(var(--p,0) * 100%));
   font-weight: 300;
 }
 

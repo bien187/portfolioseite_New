@@ -14,7 +14,7 @@ export function Hero() {
   useEffect(() => { const t = setTimeout(() => setReady(true), 120); return () => clearTimeout(t) }, [])
 
   const [typedHeadline, headlineDone] = useTypewriter("Ben\nMüller.", 150, 350)
-  const [typedSubline, sublineDone] = useTypewriter(SUBLINE, 28, 80, headlineDone)
+  const [typedSubline, sublineDone] = useTypewriter(SUBLINE, 60, 80, headlineDone)
 
   const parts = typedHeadline.split("\n")
   const sublineStarted = typedSubline.length > 0
@@ -34,7 +34,7 @@ export function Hero() {
           transition={reveal(0)}
         >
           <span className={styles.statusDot} />
-          <span className={styles.statusText}>SNB · FE RZ-Dienste · Aktuell</span>
+          <span className={styles.statusText}>Infrastruktur SNB · Aktuell</span>
         </motion.div>
 
         {/* Headline — cursor moves to subline once subline starts typing */}

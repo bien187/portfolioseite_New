@@ -3,13 +3,15 @@
   align-items: center;
   gap: 0.875rem;
   margin-bottom: clamp(2rem, 5vw, 3.5rem);
+  position: relative;
+  z-index: 5;
 }
 
 .text {
   font-family: var(--f-mono);
   font-size: var(--fs-label);
   letter-spacing: 0.17em;
-  color: var(--c-lo);
+  color: color-mix(in srgb, var(--c-lo) calc((1 - var(--p,0)) * 100%), var(--c-hi) calc(var(--p,0) * 100%));
   text-transform: uppercase;
 }
 

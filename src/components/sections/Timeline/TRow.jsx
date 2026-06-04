@@ -1,13 +1,16 @@
 import { useRef, useState, useEffect } from "react"
-import { motion } from "framer-motion"
+import { motion, useTransform } from "framer-motion"
 import { SMOOTH } from "../../../design/tokens"
-import { useCenterInView } from "../../../hooks/useCenterInView"
+import { useCenterProximity } from "../../../hooks/useCenterProximity"
 import styles from "./Timeline.module.css"
 
 export function TRow({ item, i }) {
   const ref = useRef(null)
   const [vis, setVis] = useState(false)
-  const isCenter = useCenterInView(ref)
+
+  const proximity = useCenterProximity(ref)
+  const scale = useTransform(proximity, [0, 1], [1, 1.04])
+  const lift  = useTransform(proximity, [0, 1], [0, -6])
 
   useEffect(() => {
     const el = ref.current
@@ -23,11 +26,11 @@ export function TRow({ item, i }) {
   return (
     <motion.div
       ref={ref}
-      className={[styles.row, item.live ? styles.rowLive : "", isCenter ? styles.rowCenter : ""].filter(Boolean).join(" ")}
-      aria-current={isCenter ? "true" : undefined}
-      initial={{ opacity: 0, y: 16 }}
-      animate={!vis ? {} : isCenter ? { opacity: 1, y: -4, scale: 1.012 } : { opacity: 1, y: 0, scale: 1 }}
+      className={`${styles.row} ${item.live ? styles.rowLive : ""}`}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: vis ? 1 : 0 }}
       transition={SMOOTH}
+      style={{ scale, y: lift }}
     >
       <div className={styles.period}>
         <span className={`${styles.periodText} ${item.live ? styles.periodLive : ""}`}>
