@@ -110,7 +110,7 @@ export const ENGAGEMENT = [
     role: "Freiwilliger IT-Support",
     org: "Jugendarbeit Lenzburg",
     loc: "Lenzburg AG",
-    note: "unterstützung von Senioren im Bereich Informatik",
+    note: "Unterstützung von Senioren im Bereich Informatik",
     live: false,
   },
 ]
