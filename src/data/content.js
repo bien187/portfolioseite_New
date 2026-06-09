@@ -28,6 +28,19 @@ export const SCHOOL_PROJECTS = [
   },
 ]
 
+// ── Eigene Projekte ──────────────────────────────────────────────────────────
+export const PERSONAL_PROJECTS = [
+  {
+    id: 7,
+    name: "Peakr",
+    year: "2026",
+    tags: ["Next.js", "Wetter-API", "Geodaten"],
+    url: "https://peakrr.netlify.app",
+    img: "/peakr.svg",
+    desc: "Eine App, mit der man basierend auf Fahrzeiten, Wetterdaten, Schneeverhältnissen, dem aktuellen oder einem vorgegebenen Standort sowie der Anzahl geöffneter Lifte gezielt Wanderziele (wie Bergseen, Hütten, Gipfel, Aussichtspunkte) oder Skigebiete in der Schweiz filtern und heraussuchen kann.",
+  },
+]
+
 // ── SNB-Projekte (intern) ────────────────────────────────────────────────────
 export const SNB_PROJECTS = [
   {
@@ -74,7 +87,7 @@ export const TIMELINE = [
     role: "Informatikmittelschule (IMS)",
     org: "Alte Kantonsschule Aarau/ Berufsbildung Baden",
     loc: "Aarau",
-    note: "Applikationsentwicklung EFZ, kfm. BM",
+    note: "Applikationsentwicklung EFZ, kaufmännische BM",
     live: false,
   },
   {
@@ -109,7 +122,7 @@ export const ENGAGEMENT = [
     period: "2020 — heute",
     role: "Freiwilliger IT-Support",
     org: "Jugendarbeit Lenzburg",
-    loc: "Lenzburg AG",
+    loc: "Lenzburg",
     note: "Unterstützung von Senioren im Bereich Informatik",
     live: false,
   },

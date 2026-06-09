@@ -43,11 +43,11 @@
 }
 
 .skillName {
-  font-family: var(--f-sans);
+  font-family: var(--f-mono);
   font-size: 0.9375rem;
-  font-weight: 300;
+  font-weight: 400;
   color: color-mix(in srgb, var(--c-mid) calc((1 - var(--p,0)) * 100%), var(--c-hi) calc(var(--p,0) * 100%));
-  letter-spacing: 0.01em;
+  letter-spacing: 0;
 }
 
 .skillRow:hover .skillName {
@@ -56,9 +56,10 @@
 
 .skillValue {
   font-family: var(--f-mono);
-  font-size: var(--fs-label);
+  font-size: 0.9375rem;
+  font-weight: 400;
   color: color-mix(in srgb, var(--c-lo) calc((1 - var(--p,0)) * 100%), var(--c-mid) calc(var(--p,0) * 100%));
-  letter-spacing: 0.07em;
+  letter-spacing: 0;
 }
 
 .skillSup {
@@ -71,12 +72,12 @@
 }
 
 .interestInner {
-  padding: 0.5625rem 0;
+  padding: 0.75rem 0;
   border-bottom: 1px solid var(--c-line);
-  font-family: var(--f-display);
-  font-size: var(--fs-interests);
-  font-weight: 500;
-  letter-spacing: -0.01em;
+  font-family: var(--f-mono);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  letter-spacing: 0;
   color: color-mix(in srgb, rgba(237,236,234,0.37) calc((1 - var(--p,0)) * 100%), var(--c-hi) calc(var(--p,0) * 100%));
   cursor: default;
   user-select: none;

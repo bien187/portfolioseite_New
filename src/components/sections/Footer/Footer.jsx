@@ -52,8 +52,8 @@ export function Footer() {
           transition={{ duration: 0.7, delay: 0.2 }}
         >
           <FootLink href="mailto:Ben.Linus.Mueller@outlook.com" label="Ben.Linus.Mueller@outlook.com" />
-          <FootLink href="https://github.com/bien187"      label="GitHub"   ext />
           <FootLink href="https://www.linkedin.com/in/ben-müller-4b959a273/" label="LinkedIn" ext />
+          <FootLink href="https://github.com/bien187"      label="GitHub"   ext />
         </motion.ul>
       </div>
 
