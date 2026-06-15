@@ -1,0 +1,19 @@
+.glow {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.45s var(--ease-smooth);
+  mix-blend-mode: screen;
+  background: radial-gradient(
+    16rem 16rem at var(--mx, -100%) var(--my, -100%),
+    rgba(191, 168, 128, 0.12),
+    rgba(191, 168, 128, 0.05) 32%,
+    transparent 62%
+  );
+}
+
+@media (pointer: coarse) {
+  .glow { display: none; }
+}

@@ -6,6 +6,10 @@
   margin-bottom: var(--sp-group-gap);
 }
 
+.groupHead {
+  margin-bottom: clamp(0.75rem, 1.5vw, 1.25rem);
+}
+
 .row {
   display: block;
   position: relative;
