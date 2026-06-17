@@ -35,7 +35,7 @@ export const PERSONAL_PROJECTS = [
     name: "Peakr",
     year: "2026",
     tags: ["Next.js", "Wetter-API", "Geodaten"],
-    url: "https://ben-mueller-portfolio.vercel.app",
+    url: "https://peakr-ch.vercel.app",
     img: "/peakr.svg",
     desc: "Eine App, mit der man basierend auf Fahrzeiten, Wetterdaten, Schneeverhältnissen, dem aktuellen oder einem vorgegebenen Standort sowie der Anzahl geöffneter Lifte gezielt Wanderziele (wie Bergseen, Hütten, Gipfel, Aussichtspunkte) oder Skigebiete in der Schweiz filtern und heraussuchen kann.",
   },

@@ -39,12 +39,11 @@
 }
 
 .logo {
-  width: clamp(2.25rem, 4vw, 3rem);
-  height: clamp(2.25rem, 4vw, 3rem);
+  width: clamp(1.625rem, 2.6vw, 2.375rem);
+  height: clamp(1.625rem, 2.6vw, 2.375rem);
   flex-shrink: 0;
-  border-radius: 0.5rem;
+  border-radius: 0.375rem;
   border: 1px solid var(--c-line);
-  margin-top: 0.125rem;
 }
 
 .rowContent {

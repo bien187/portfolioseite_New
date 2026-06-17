@@ -66,12 +66,12 @@ export function ProjRow({ p, i }) {
       )}
 
       <div className={styles.rowInner}>
-        {p.img && (
-          <img src={p.img} alt="" aria-hidden className={styles.logo} />
-        )}
         <div className={styles.rowContent}>
           <div className={styles.titleRow}>
             <h3 className={styles.nameLg}>{p.name}</h3>
+            {p.img && (
+              <img src={p.img} alt="" aria-hidden className={styles.logo} />
+            )}
             {p.ipa && <span className={styles.ipaBadge}>IPA</span>}
             <span className={styles.year}>{p.year}</span>
           </div>
