@@ -39,6 +39,22 @@ export const PERSONAL_PROJECTS = [
     img: "/peakr.svg",
     desc: "Eine App, mit der man basierend auf Fahrzeiten, Wetterdaten, Schneeverhältnissen, dem aktuellen oder einem vorgegebenen Standort sowie der Anzahl geöffneter Lifte gezielt Wanderziele (wie Bergseen, Hütten, Gipfel, Aussichtspunkte) oder Skigebiete in der Schweiz filtern und heraussuchen kann.",
   },
+  {
+    id: 8,
+    name: "Garmin Hub",
+    year: "2026",
+    tags: ["TypeScript", "Python", "Garmin-API"],
+    privat: true,
+    desc: "Persönliche Trainings-Webapp: synchronisiert alle Garmin-Daten über die Garmin-Connect-API, wertet sie mit einer regelbasierten sportwissenschaftlichen Engine aus und bereitet gezielt auf die Eignungsprüfung der Schweizer Armee-Grenadiere vor.",
+  },
+  {
+    id: 9,
+    name: "Fuji Field Guide",
+    year: "2026",
+    tags: ["React", "TypeScript", "PWA"],
+    privat: true,
+    desc: "Offline-Feldnachschlagewerk für die Fujifilm X-T30 III (XC 13-33mm): Szenarien, Filmsimulations-Rezepte, Vibes, Orte und Rechner — als installierbare PWA.",
+  },
 ]
 
 // ── SNB-Projekte (intern) ────────────────────────────────────────────────────

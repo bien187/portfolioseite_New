@@ -1,0 +1,16 @@
+# Dependencies & Build
+node_modules/
+dist/
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
+
+# iCloud-/Finder-Duplikate ("… 2"-Kopien)
+* 2.*
+* 2/
+
+# Lokale Editor-/Tool-Einstellungen
+.claude/settings.local.json

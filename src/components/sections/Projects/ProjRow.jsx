@@ -90,7 +90,7 @@ export function ProjRow({ p, i }) {
             transition={SPRING}
           >↗</motion.span>
         ) : (
-          <span className={styles.internBadge}>intern</span>
+          <span className={styles.internBadge}>{p.privat ? "privat" : "intern"}</span>
         )}
       </div>
     </El>
