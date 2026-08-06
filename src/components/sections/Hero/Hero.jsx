@@ -5,7 +5,7 @@ import { useTypewriter } from "../../../hooks/useTypewriter"
 import { SMOOTH } from "../../../design/tokens"
 import styles from "./Hero.module.css"
 
-const SUBLINE_PLAIN = "Angehender Informatiker — aktuell im Praktikumsjahr bei der "
+const SUBLINE_PLAIN = "Informatiker EFZ, Software Engineer bei der "
 const SUBLINE_ACCENT = "Schweizerischen Nationalbank."
 const SUBLINE = SUBLINE_PLAIN + SUBLINE_ACCENT
 

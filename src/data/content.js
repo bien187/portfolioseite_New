@@ -16,7 +16,7 @@ export const SCHOOL_PROJECTS = [
     year: "2024",
     tags: ["React", "Firebase"],
     url: "https://ideeninsel.netlify.app",
-    desc: "Digitale Pinnwand zum Sammeln und Teilen von Ideen — öffentlich und kollaborativ.",
+    desc: "Digitale Pinnwand zum Sammeln und Teilen von Ideen, öffentlich und kollaborativ.",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export const SCHOOL_PROJECTS = [
     year: "2025",
     tags: ["React", "Firebase", "Tailwind"],
     url: "https://ideeninsel2.netlify.app",
-    desc: "Neugestaltung der Pinnwand — überarbeitetes Designsystem, Accounts und neue Funktionen.",
+    desc: "Neugestaltung der Pinnwand mit überarbeitetem Designsystem, Accounts und neuen Funktionen.",
   },
 ]
 
@@ -53,7 +53,7 @@ export const PERSONAL_PROJECTS = [
     year: "2026",
     tags: ["React", "TypeScript", "PWA"],
     privat: true,
-    desc: "Offline-Feldnachschlagewerk für die Fujifilm X-T30 III (XC 13-33mm): Szenarien, Filmsimulations-Rezepte, Vibes, Orte und Rechner — als installierbare PWA.",
+    desc: "Offline-Feldnachschlagewerk für die Fujifilm X-T30 III (XC 13-33mm): Szenarien, Filmsimulations-Rezepte, Vibes, Orte und Rechner, umgesetzt als installierbare PWA.",
   },
 ]
 
@@ -79,10 +79,10 @@ export const SNB_PROJECTS = [
   },
   {
     id: 6,
-    name: "IPA — Confluence Backup",
-    year: "April - Mai 2026",
+    name: "IPA: Confluence Backup",
+    year: "April bis Mai 2026",
     tags: ["PowerShell Universal", "Confluence API", "Backup"],
-    desc: "Abschlussprojekt: Dashboard für den systematischen Export und die Sicherung von Confluence Spaces — erstmalig lückenloses Backup dieser Inhalte in der SNB.",
+    desc: "Abschlussprojekt: Dashboard für den systematischen Export und die Sicherung von Confluence Spaces, erstmalig ein lückenloses Backup dieser Inhalte in der SNB.",
     intern: true,
     ipa: true,
   },
@@ -91,23 +91,31 @@ export const SNB_PROJECTS = [
 // ── Werdegang ────────────────────────────────────────────────────────────────
 export const TIMELINE = [
   {
-    period: "2025 — heute",
-    role: "Praktikant Informatik",
+    period: "2026 bis heute",
+    role: "Software Engineer",
     org: "Schweizerische Nationalbank",
     loc: "Zürich",
     note: "Infrastruktur SNB",
     live: true,
   },
   {
-    period: "2022 — heute",
+    period: "2025 bis 2026",
+    role: "Praktikant Informatik",
+    org: "Schweizerische Nationalbank",
+    loc: "Zürich",
+    note: "Infrastruktur SNB",
+    live: false,
+  },
+  {
+    period: "2022 bis 2026",
     role: "Informatikmittelschule (IMS)",
-    org: "Alte Kantonsschule Aarau/ Berufsbildung Baden",
+    org: "Alte Kantonsschule Aarau/Berufsbildung Baden",
     loc: "Aarau",
     note: "Applikationsentwicklung EFZ, kaufmännische BM",
     live: false,
   },
   {
-    period: "2019 — 2022",
+    period: "2019 bis 2022",
     role: "Sekundarstufe",
     org: "Oberstufenzentrum Lenzhard",
     loc: "Lenzburg",
@@ -115,7 +123,7 @@ export const TIMELINE = [
     live: false,
   },
   {
-    period: "2013 — 2019",
+    period: "2013 bis 2019",
     role: "Primarstufe",
     org: "Regionalschule Lenzburg",
     loc: "Lenzburg",
@@ -127,7 +135,7 @@ export const TIMELINE = [
 // ── Engagement ───────────────────────────────────────────────────────────────
 export const ENGAGEMENT = [
   {
-    period: "2022 — heute",
+    period: "2022 bis heute",
     role: "Hilfstrainer",
     org: "LA-Team Lenzburg",
     loc: "Lenzburg",
@@ -135,7 +143,7 @@ export const ENGAGEMENT = [
     live: false,
   },
   {
-    period: "2020 — heute",
+    period: "2020 bis heute",
     role: "Freiwilliger IT-Support",
     org: "Jugendarbeit Lenzburg",
     loc: "Lenzburg",
