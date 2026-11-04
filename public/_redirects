@@ -1,0 +1,4 @@
+# Versteckte Kontakt-/Visitenkarten-Seite
+# Direktaufruf über /contact — im Portfolio selbst nicht verlinkt.
+/contact    /index.html   200
+/contact/   /index.html   200
