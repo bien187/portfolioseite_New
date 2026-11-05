@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="6" fill="#09090B"/>
+  <!-- Monochrome Variante der Garmin-Hub-Bildmarke: Doppelgipfel mit Schattenflanke und Horizont -->
+  <path d="M5.1 23.8 11.2 14.3 17.4 23.8z" fill="#5A595C"/>
+  <path d="M7.9 23.8 17.4 8.2 26.9 23.8z" fill="#EDECEA"/>
+  <path d="M17.4 8.2 26.9 23.8H17.4z" fill="#8E8D90"/>
+  <path d="M4.5 24.6h23" stroke="#EDECEA" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

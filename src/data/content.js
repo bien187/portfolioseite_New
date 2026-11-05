@@ -29,13 +29,16 @@ export const SCHOOL_PROJECTS = [
 ]
 
 // ── Eigene Projekte ──────────────────────────────────────────────────────────
+// live / repo: Ziele der Auswahl auf der Projektkarte (Live-Projekt bzw. GitHub).
+// liveLabel / liveHint: optionale Beschriftung der Live-Option.
 export const PERSONAL_PROJECTS = [
   {
     id: 7,
     name: "Peakr",
     year: "2026",
     tags: ["Next.js", "Wetter-API", "Geodaten"],
-    url: "https://peakr-ch.vercel.app",
+    live: "https://peakr-ch.vercel.app",
+    repo: "https://github.com/bien187/peakr",
     img: "/peakr.svg",
     desc: "Eine App, mit der man basierend auf Fahrzeiten, Wetterdaten, Schneeverhältnissen, dem aktuellen oder einem vorgegebenen Standort sowie der Anzahl geöffneter Lifte gezielt Wanderziele (wie Bergseen, Hütten, Gipfel, Aussichtspunkte) oder Skigebiete in der Schweiz filtern und heraussuchen kann.",
   },
@@ -44,16 +47,24 @@ export const PERSONAL_PROJECTS = [
     name: "Garmin Hub",
     year: "2026",
     tags: ["TypeScript", "Python", "Garmin-API"],
-    privat: true,
-    desc: "Persönliche Trainings-Webapp: synchronisiert alle Garmin-Daten über die Garmin-Connect-API, wertet sie mit einer regelbasierten sportwissenschaftlichen Engine aus und bereitet gezielt auf die Eignungsprüfung der Schweizer Armee-Grenadiere vor.",
+    live: "https://garmin-hub.vercel.app",
+    liveLabel: "Live-App",
+    liveHint: "Persönliche Instanz, Login erforderlich",
+    repo: "https://github.com/bien187/garmin-hub/tree/main",
+    img: "/garmin-hub.svg",
+    desc: "Persönliche Trainingszentrale für die Vorbereitung auf die Eignungsprüfung der Grenadiere. Garmin Hub bündelt Aktivitäten, Schlaf- und Gesundheitsdaten aus Garmin Connect und leitet daraus mit einer regelbasierten Engine einen adaptiven Trainingsplan und den aktuellen Notenstand ab. Workouts und Routen landen direkt auf der Uhr.",
   },
   {
-    id: 9,
-    name: "Fuji Field Guide",
+    id: 10,
+    name: "Memento",
     year: "2026",
-    tags: ["React", "TypeScript", "PWA"],
-    privat: true,
-    desc: "Offline-Feldnachschlagewerk für die Fujifilm X-T30 III (XC 13-33mm): Szenarien, Filmsimulations-Rezepte, Vibes, Orte und Rechner, umgesetzt als installierbare PWA.",
+    tags: ["Next.js", "Supabase", "PWA"],
+    live: "https://memento-v5la.vercel.app/demo",
+    liveLabel: "Demo ansehen",
+    liveHint: "Öffentliche Demo im Browser",
+    repo: "https://github.com/bien187/Memento",
+    img: "/memento.svg",
+    desc: "Ein persönliches Militärtagebuch für RS und WK: Erinnerungen, Fotos und besondere Momente Tag für Tag festhalten und daraus ein eigenes Erinnerungsbuch gestalten. Funktioniert lokal ohne Konto, optional mit Cloud-Sync und Freigabelinks.",
   },
 ]
 
