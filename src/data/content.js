@@ -40,7 +40,7 @@ export const PERSONAL_PROJECTS = [
     live: "https://peakr-ch.vercel.app",
     repo: "https://github.com/bien187/peakr",
     img: "/peakr.svg",
-    desc: "Eine App, mit der man basierend auf Fahrzeiten, Wetterdaten, Schneeverhältnissen, dem aktuellen oder einem vorgegebenen Standort sowie der Anzahl geöffneter Lifte gezielt Wanderziele (wie Bergseen, Hütten, Gipfel, Aussichtspunkte) oder Skigebiete in der Schweiz filtern und heraussuchen kann.",
+    desc: "Peakr ist aus dem Wunsch entstanden, spontan passende Ski- und Wanderziele zu finden, ohne dafür verschiedene Plattformen durchsuchen zu müssen. Die App kombiniert Fahrzeiten, Wetter, Schneeverhältnisse und weitere Bedingungen, um passende Ziele in der Schweiz zu finden. Dabei werden verschiedene offene Datenquellen zusammengeführt und eigene Berechnungen genutzt, um die Suche möglichst einfach und unabhängig von kostenpflichtigen Diensten zu gestalten.",
   },
   {
     id: 8,
@@ -52,7 +52,7 @@ export const PERSONAL_PROJECTS = [
     liveHint: "Öffentliche Demo mit Beispieldaten",
     repo: "https://github.com/bien187/garmin-hub/tree/main",
     img: "/garmin-hub.svg",
-    desc: "Persönliche Trainingszentrale für die Vorbereitung auf die Eignungsprüfung der Grenadiere. Garmin Hub bündelt Aktivitäten, Schlaf- und Gesundheitsdaten aus Garmin Connect und leitet daraus mit einer regelbasierten Engine einen adaptiven Trainingsplan und den aktuellen Notenstand ab. Workouts und Routen landen direkt auf der Uhr.",
+    desc: "Garmin Hub ist aus meiner eigenen Vorbereitung auf die Grenadier-Eignungsprüfung entstanden. Die Anwendung bündelt Trainings-, Schlaf- und Gesundheitsdaten aus Garmin Connect und wertet sie aus, um Fortschritte, Belastung und Regeneration übersichtlich darzustellen. Eine regelbasierte Engine erstellt daraus einen adaptiven Trainingsplan, der laufend an das aktuelle Trainingsziel angepasst wird. Workouts und Routen können direkt auf die Garmin-Uhr übertragen werden.",
   },
   {
     id: 10,
@@ -64,7 +64,7 @@ export const PERSONAL_PROJECTS = [
     liveHint: "Öffentliche Demo im Browser",
     repo: "https://github.com/bien187/Memento",
     img: "/memento.svg",
-    desc: "Ein persönliches Militärtagebuch für RS und WK: Erinnerungen, Fotos und besondere Momente Tag für Tag festhalten und daraus ein eigenes Erinnerungsbuch gestalten. Funktioniert lokal ohne Konto, optional mit Cloud-Sync und Freigabelinks.",
+    desc: "Memento ist ein persönliches Tagebuch für die Rekrutenschule. Die Anwendung ermöglicht es, Erlebnisse, Fotos und besondere Momente während der RS (und später auch WKs) festzuhalten und daraus ein eigenes Erinnerungsbuch zu gestalten. Sie funktioniert lokal und ohne Benutzerkonto, bietet bei Bedarf aber auch Cloud-Synchronisation und die Möglichkeit, Einträge über Freigabelinks mit anderen zu teilen.",
   },
 ]
 
